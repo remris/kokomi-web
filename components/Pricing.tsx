@@ -7,10 +7,10 @@ const plans = [
 		name: 'Free',
 		price: '0',
 		period: 'für immer',
-		desc: 'Alles Wichtige — kostenlos. Für immer.',
+		desc: 'Alles Wichtige – kostenlos. Für immer.',
 		cta: 'Kostenlos starten',
 		highlight: false,
-		ctaStyle: 'border border-white/20 text-white hover:bg-white/10',
+		ctaStyle: 'border border-gray-300 text-gray-700 hover:bg-gray-100',
 		features: [
 			'Vorrat (unlimitiert)',
 			'Barcode-Scanner',
@@ -38,8 +38,7 @@ const plans = [
 		desc: 'Für alle die das Maximum wollen.',
 		cta: 'Pro werden',
 		highlight: true,
-		ctaStyle:
-			'gradient-brand text-white shadow-lg shadow-blue-500/30 hover:opacity-90',
+		ctaStyle: 'gradient-brand text-white shadow-lg hover:opacity-90',
 		features: [
 			'Alles aus Free',
 			'KI-Rezepte unlimitiert 🚀',
@@ -61,23 +60,19 @@ export default function Pricing() {
 	return (
 		<section
 			id="pricing"
-			className="py-28 px-4"
-			style={{
-				background:
-					'linear-gradient(180deg, #0a0f18 0%, #08101a 100%)',
-			}}
+			className="bg-gray-50 py-28 px-4"
 		>
 			<div className="max-w-4xl mx-auto">
 				{/* Header */}
 				<div className="text-center mb-16">
-					<span className="text-blue-400 text-sm font-semibold uppercase tracking-widest">
+					<span className="text-[#3D6B8F] text-sm font-semibold uppercase tracking-widest">
 						Preise
 					</span>
-					<h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">
+					<h2 className="text-4xl md:text-5xl font-black text-gray-900 mt-3 mb-4">
 						Einfach. Transparent.
 					</h2>
-					<p className="text-gray-400 text-lg">
-						Starte kostenlos — upgrade wenn du mehr willst.
+					<p className="text-gray-500 text-lg">
+						Starte kostenlos – upgrade wenn du mehr willst.
 					</p>
 				</div>
 
@@ -88,8 +83,8 @@ export default function Pricing() {
 							key={plan.name}
 							className={`relative rounded-3xl p-8 border ${
 								plan.highlight
-									? 'bg-gradient-to-br from-blue-950/60 to-gray-950 border-blue-500/40'
-									: 'bg-gray-900/60 border-white/10'
+									? 'bg-white border-[#3D6B8F]/40 shadow-xl shadow-[#3D6B8F]/10'
+									: 'bg-white border-gray-200 shadow-sm'
 							}`}
 						>
 							{plan.highlight && (
@@ -101,26 +96,26 @@ export default function Pricing() {
 							)}
 
 							<div className="mb-6">
-								<h3 className="text-white font-bold text-xl mb-1">
+								<h3 className="text-gray-900 font-bold text-xl mb-1">
 									{plan.name}
 								</h3>
 								<p className="text-gray-500 text-sm">
 									{plan.desc}
 								</p>
 								<div className="mt-4 flex items-end gap-2">
-									<span className="text-5xl font-black text-white">
+									<span className="text-5xl font-black text-gray-900">
 										{plan.price}€
 									</span>
-									<span className="text-gray-500 mb-2">
+									<span className="text-gray-400 mb-2">
 										/{plan.period}
 									</span>
 								</div>
 								{plan.yearPrice && (
 									<div className="mt-2 flex items-center gap-2">
-										<span className="text-gray-400 text-sm">
+										<span className="text-gray-500 text-sm">
 											oder {plan.yearPrice}
 										</span>
-										<span className="bg-teal-500/20 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full">
+										<span className="bg-[#56B4A0]/15 text-[#56B4A0] text-xs font-bold px-2 py-0.5 rounded-full">
 											{plan.yearSave}
 										</span>
 									</div>
@@ -138,11 +133,11 @@ export default function Pricing() {
 								{plan.features.map(f => (
 									<li
 										key={f}
-										className="flex items-start gap-2.5 text-sm text-gray-300"
+										className="flex items-start gap-2.5 text-sm text-gray-600"
 									>
 										<Check
 											size={15}
-											className="text-teal-400 mt-0.5 flex-shrink-0"
+											className="text-[#56B4A0] mt-0.5 flex-shrink-0"
 										/>
 										{f}
 									</li>
@@ -150,9 +145,9 @@ export default function Pricing() {
 								{plan.missing.map(f => (
 									<li
 										key={f}
-										className="flex items-start gap-2.5 text-sm text-gray-600 line-through"
+										className="flex items-start gap-2.5 text-sm text-gray-300 line-through"
 									>
-										<span className="w-4 h-4 flex-shrink-0 mt-0.5 text-gray-700">
+										<span className="w-4 h-4 flex-shrink-0 mt-0.5 text-gray-300">
 											✕
 										</span>
 										{f}
@@ -163,7 +158,7 @@ export default function Pricing() {
 					))}
 				</div>
 
-				<p className="text-center text-gray-600 text-sm mt-8">
+				<p className="text-center text-gray-400 text-sm mt-8">
 					Keine Kreditkarte für den Free-Plan erforderlich · Jederzeit kündbar ·
 					DSGVO-konform
 				</p>

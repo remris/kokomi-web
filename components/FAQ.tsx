@@ -41,23 +41,23 @@ const faqs = [
 function FaqItem({ q, a }: { q: string; a: string }) {
 	const [open, setOpen] = useState(false)
 	return (
-		<div className="border-b border-white/5 last:border-0">
+		<div className="border-b border-gray-100 last:border-0">
 			<button
 				onClick={() => setOpen(!open)}
 				className="w-full flex items-center justify-between py-5 text-left group"
 			>
-				<span className="text-white font-semibold text-base group-hover:text-blue-300 transition-colors pr-4">
+				<span className="text-gray-800 font-semibold text-base group-hover:text-[#3D6B8F] transition-colors pr-4">
 					{q}
 				</span>
 				<ChevronDown
 					size={18}
-					className={`text-gray-500 flex-shrink-0 transition-transform duration-200 ${
+					className={`text-gray-400 flex-shrink-0 transition-transform duration-200 ${
 						open ? 'rotate-180' : ''
 					}`}
 				/>
 			</button>
 			{open && (
-				<div className="pb-5 text-gray-400 text-sm leading-relaxed">{a}</div>
+				<div className="pb-5 text-gray-500 text-sm leading-relaxed">{a}</div>
 			)}
 		</div>
 	)
@@ -65,29 +65,29 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
 	return (
-		<section id="faq" className="bg-gray-950 py-28 px-4">
+		<section id="faq" className="bg-gray-50 py-28 px-4">
 			<div className="max-w-3xl mx-auto">
 				<div className="text-center mb-14">
-					<span className="text-blue-400 text-sm font-semibold uppercase tracking-widest">
+					<span className="text-[#3D6B8F] text-sm font-semibold uppercase tracking-widest">
 						FAQ
 					</span>
-					<h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-4">
+					<h2 className="text-4xl md:text-5xl font-black text-gray-900 mt-3 mb-4">
 						Häufige Fragen
 					</h2>
-					<p className="text-gray-400">
-						Alles was du wissen musst — auf einen Blick.
+					<p className="text-gray-500">
+						Alles was du wissen musst – auf einen Blick.
 					</p>
 				</div>
-				<div className="glass rounded-2xl px-6 divide-y divide-white/5">
+				<div className="bg-white border border-gray-200 rounded-2xl px-6 shadow-sm">
 					{faqs.map(f => (
 						<FaqItem key={f.q} q={f.q} a={f.a} />
 					))}
 				</div>
-				<p className="text-center text-gray-600 text-sm mt-8">
+				<p className="text-center text-gray-400 text-sm mt-8">
 					Weitere Fragen?{' '}
 					<a
 						href="mailto:support@kokomi.app"
-						className="text-blue-400 hover:underline"
+						className="text-[#3D6B8F] hover:underline"
 					>
 						support@kokomi.app
 					</a>
