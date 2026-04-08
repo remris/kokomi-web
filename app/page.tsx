@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
+import Screenshots from '@/components/Screenshots'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import Testimonials from '@/components/Testimonials'
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <Screenshots />
       <HowItWorks />
       <Pricing />
       <Testimonials />
@@ -23,4 +25,3 @@ export default function Home() {
     </main>
   )
 }
-

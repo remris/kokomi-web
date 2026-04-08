@@ -1,156 +1,186 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { ArrowDown, Sparkles, ShoppingCart, ChefHat } from 'lucide-react'
+import { ArrowDown, Sparkles, Star } from 'lucide-react'
+
+function PhoneMockup({ label, screen }: { label: string; screen: React.ReactNode }) {
+  return (
+    <div className="relative mx-auto w-56 md:w-64">
+      <div className="bg-gray-900 rounded-[2.8rem] p-2.5 phone-shadow">
+        <div className="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-gray-950 rounded-full z-10" />
+        <div className="bg-gray-950 rounded-[2.3rem] overflow-hidden aspect-[9/19.5] relative">
+          {screen}
+          <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+            <span className="text-[9px] text-white/30 bg-black/40 px-2 py-0.5 rounded-full">{label}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function HeroAppScreen() {
+  const items = [
+    { e: '🥛', n: 'Milch', d: '2 Tage', c: 'text-yellow-400' },
+    { e: '🥚', n: 'Eier (6)', d: '12 Tage', c: 'text-green-400' },
+    { e: '🧀', n: 'Parmesan', d: '30 Tage', c: 'text-green-400' },
+    { e: '🍅', n: 'Tomaten', d: '1 Tag', c: 'text-red-400' },
+    { e: '🥩', n: 'Hähnchen', d: '3 Tage', c: 'text-yellow-400' },
+  ]
+  return (
+    <div className="w-full h-full flex flex-col bg-[#08101a]">
+      <div className="px-4 pt-8 pb-3 bg-gradient-to-b from-[#0d1d30] to-[#08101a]">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[9px] text-blue-400/70">Guten Morgen 👋</p>
+            <p className="text-[11px] font-bold text-white">Mein Vorrat</p>
+          </div>
+          <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+            <span className="text-[8px]">👤</span>
+          </div>
+        </div>
+      </div>
+      <div className="px-3 grid grid-cols-3 gap-1.5 mb-3 mt-2">
+        {[['32', 'Artikel'], ['3', 'Ablauf bald'], ['5', 'KI-Rezepte']].map(([n, l]) => (
+          <div key={l} className="bg-[#0d1d30] rounded-xl p-2 text-center">
+            <p className="text-[12px] font-black text-white">{n}</p>
+            <p className="text-[7px] text-gray-500">{l}</p>
+          </div>
+        ))}
+      </div>
+      <div className="px-3 flex-1 space-y-1.5 overflow-hidden">
+        {items.map(item => (
+          <div key={item.n} className="flex items-center gap-2 bg-[#0d1d30]/60 rounded-xl px-2.5 py-1.5">
+            <span className="text-[14px]">{item.e}</span>
+            <p className="flex-1 text-[9px] font-semibold text-white">{item.n}</p>
+            <span className={`text-[7px] font-medium ${item.c}`}>{item.d}</span>
+          </div>
+        ))}
+      </div>
+      <div className="px-3 pb-4 pt-2">
+        <div className="h-8 rounded-full gradient-brand flex items-center justify-center">
+          <span className="text-[9px] font-bold text-white">+ Artikel hinzufügen</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const featurePills = [
+  '🧠 KI-Rezepte', '📦 Vorrat tracken', '🛒 Einkaufslisten',
+  '👥 Haushalt teilen', '📊 Nährwerte', '🌱 Lebensmittel retten',
+]
 
 export default function Hero() {
-  const badgeRef = useRef<HTMLDivElement>(null)
+  const headRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = badgeRef.current
-    if (!el) return
-    el.style.opacity = '1'
-    el.style.transform = 'translateY(0)'
+    if (headRef.current) {
+      headRef.current.style.opacity = '1'
+      headRef.current.style.transform = 'translateY(0)'
+    }
   }, [])
 
   return (
-    <section className="relative min-h-screen gradient-hero flex flex-col items-center justify-center px-4 overflow-hidden">
-      {/* Ambient glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-600/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
+    <section className="relative min-h-screen gradient-hero flex flex-col items-center justify-center px-4 pt-20 pb-16 overflow-hidden">
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '64px 64px',
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        {/* Badge */}
-        <div
-          ref={badgeRef}
-          className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-medium px-4 py-2 rounded-full mb-8 transition-all duration-700"
-          style={{ opacity: 0, transform: 'translateY(10px)' }}
-        >
-          <Sparkles size={14} />
-          KI-gestützte Küchen-App — kostenlos starten
-        </div>
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-        {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
-          Deine Küche.{' '}
-          <span className="text-gradient">Smarter.</span>
-        </h1>
+          {/* Left – Text */}
+          <div ref={headRef} className="text-center lg:text-left transition-all duration-700"
+            style={{ opacity: 0, transform: 'translateY(24px)' }}>
+            <div className="inline-flex items-center gap-2 glass-brand text-blue-300 text-xs font-semibold px-4 py-2 rounded-full mb-6">
+              <Sparkles size={12} />
+              KI-gestützte Küchen-App · Kostenlos starten
+            </div>
 
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Vorrat verwalten, KI-Rezepte aus deinen Zutaten generieren,
-          Einkaufslisten mit dem Haushalt teilen — alles in einer App.
-        </p>
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-white leading-[1.05] mb-5">
+              Deine Küche.{' '}
+              <span className="text-gradient">Smarter.</span>
+              <br />
+              <span className="text-3xl md:text-4xl xl:text-5xl font-bold text-gray-400">
+                Lebensmittel retten.
+              </span>
+            </h1>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a
-            href="#download"
-            className="group flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-lg transition-all duration-200 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:scale-105"
-          >
-            <span>📱</span>
-            Kostenlos herunterladen
-          </a>
-          <a
-            href="#features"
-            className="flex items-center gap-2 text-gray-300 hover:text-white font-medium px-6 py-4 rounded-full border border-white/20 hover:border-white/40 transition-all"
-          >
-            Features entdecken
-            <ArrowDown size={16} />
-          </a>
-        </div>
+            <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
+              Vorrat tracken, KI-Rezepte aus deinen Zutaten generieren,
+              Einkaufslisten mit dem Haushalt teilen — und nie wieder Lebensmittel verschwenden.
+            </p>
 
-        {/* Floating feature pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {[
-            { icon: '🧠', text: 'KI-Rezepte' },
-            { icon: '📦', text: 'Vorrat tracken' },
-            { icon: '🛒', text: 'Einkaufslisten' },
-            { icon: '👥', text: 'Haushalt teilen' },
-            { icon: '📊', text: 'Nährwerte' },
-            { icon: '🏷️', text: 'Barcode-Scanner' },
-          ].map(item => (
-            <span
-              key={item.text}
-              className="flex items-center gap-1.5 glass text-gray-300 text-sm px-3 py-1.5 rounded-full"
-            >
-              {item.icon} {item.text}
-            </span>
-          ))}
-        </div>
-
-        {/* Phone mockup */}
-        <div className="relative mx-auto w-64 md:w-72 animate-float">
-          <div className="bg-gray-900 rounded-[3rem] p-3 shadow-2xl shadow-black/60 border border-white/10">
-            <div className="bg-gray-950 rounded-[2.5rem] overflow-hidden aspect-[9/19]">
-              {/* Status bar */}
-              <div className="bg-green-800 px-6 pt-4 pb-6">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-white text-xs font-medium">9:41</span>
-                  <div className="flex gap-1">
-                    <div className="w-3 h-1.5 bg-white rounded-sm" />
-                    <div className="w-1.5 h-1.5 bg-white/60 rounded-sm" />
+            <div className="flex items-center gap-3 justify-center lg:justify-start mb-8">
+              <div className="flex -space-x-2">
+                {['🧑‍🍳', '👩‍🍳', '🧑‍🍳', '👨‍🍳', '👩'].map((e, i) => (
+                  <div key={i} className="w-8 h-8 rounded-full glass-brand border border-blue-500/20 flex items-center justify-center text-sm">
+                    {e}
                   </div>
-                </div>
-                <p className="text-green-100 text-xs">Guten Morgen! 👋</p>
-                <p className="text-white font-bold text-base mt-1">Was kochst du heute?</p>
+                ))}
               </div>
-              {/* Content */}
-              <div className="bg-gray-950 p-4 space-y-3">
-                <div className="bg-gray-900 rounded-2xl p-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-900 rounded-xl flex items-center justify-center text-lg">🥗</div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">Thai Curry</p>
-                    <p className="text-gray-500 text-xs">25 Min · 480 kcal</p>
-                  </div>
-                  <div className="ml-auto bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded-full">KI</div>
+              <div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
+                  ))}
                 </div>
-                <div className="bg-gray-900 rounded-2xl p-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-orange-900 rounded-xl flex items-center justify-center text-lg">🍝</div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">Pasta Primavera</p>
-                    <p className="text-gray-500 text-xs">20 Min · 420 kcal</p>
-                  </div>
-                  <div className="ml-auto bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded-full">KI</div>
-                </div>
-                <div className="bg-gray-900 rounded-2xl p-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center text-lg">🥘</div>
-                  <div>
-                    <p className="text-white text-xs font-semibold">Griechischer Auflauf</p>
-                    <p className="text-gray-500 text-xs">35 Min · 550 kcal</p>
-                  </div>
-                  <div className="ml-auto bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded-full">KI</div>
-                </div>
-                {/* Bottom nav hint */}
-                <div className="flex justify-around pt-2 border-t border-gray-800">
-                  <span className="text-green-400 text-lg">🏠</span>
-                  <span className="text-gray-600 text-lg">📦</span>
-                  <span className="text-gray-600 text-lg">📷</span>
-                  <span className="text-gray-600 text-lg">🍳</span>
-                  <span className="text-gray-600 text-lg">🛒</span>
-                </div>
+                <p className="text-xs text-gray-500">Beliebt bei Haushalten in DE</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+              <a href="#download"
+                className="flex items-center justify-center gap-3 gradient-brand text-white font-bold px-8 py-4 rounded-2xl text-lg shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-105 transition-all">
+                <span>📱</span>
+                Kostenlos herunterladen
+              </a>
+              <a href="#features"
+                className="flex items-center justify-center gap-2 text-gray-300 hover:text-white font-medium px-6 py-4 rounded-2xl glass hover:bg-white/10 transition-all">
+                Features entdecken <ArrowDown size={16} />
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              {featurePills.map(item => (
+                <span key={item} className="glass text-gray-300 text-xs px-3 py-1.5 rounded-full">{item}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Right – Phone mockup */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute inset-0 scale-75 bg-blue-500/20 rounded-full blur-3xl" />
+              <div className="relative animate-float">
+                <PhoneMockup label="→ Screenshot hier einfügen" screen={<HeroAppScreen />} />
+              </div>
+              <div className="absolute -left-12 top-1/4 glass-brand rounded-2xl p-3 animate-float-slow hidden lg:block">
+                <p className="text-[11px] font-bold text-white mb-0.5">🧠 KI-Rezept</p>
+                <p className="text-[10px] text-gray-400">Aus deinen Vorräten</p>
+                <p className="text-[10px] text-blue-400 font-medium mt-1">Pasta Carbonara ✨</p>
+              </div>
+              <div className="absolute -right-10 bottom-1/3 glass rounded-2xl p-3 animate-float hidden lg:block" style={{ animationDelay: '2s' }}>
+                <p className="text-[11px] font-bold text-white mb-0.5">♻️ Gerettet!</p>
+                <p className="text-[10px] text-teal-400">3 Artikel vor Ablauf</p>
               </div>
             </div>
           </div>
-          {/* Glow under phone */}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-40 h-8 bg-green-500/30 rounded-full blur-xl" />
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500">
-        <span className="text-xs">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-gray-500 to-transparent" />
+        <div className="text-center mt-16 hidden md:block">
+          <a href="#features" className="inline-flex flex-col items-center gap-2 text-gray-600 hover:text-gray-400 transition-colors">
+            <span className="text-xs">Scroll für mehr</span>
+            <ArrowDown size={16} className="animate-bounce" />
+          </a>
+        </div>
       </div>
     </section>
   )
 }
-

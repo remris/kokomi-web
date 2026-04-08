@@ -1,59 +1,74 @@
+'use client'
+
 export default function Footer() {
+  const navLinks = [
+    { href: '#features', label: 'Features' },
+    { href: '#screenshots', label: 'Screenshots' },
+    { href: '#pricing', label: 'Preise' },
+    { href: '#download', label: 'Download' },
+    { href: '#faq', label: 'FAQ' },
+  ]
+  const legalLinks = [
+    { href: '/datenschutz', label: 'Datenschutz' },
+    { href: '/impressum', label: 'Impressum' },
+    { href: '/agb', label: 'AGB' },
+  ]
+
   return (
-    <footer className="bg-gray-950 border-t border-white/10 py-12 px-4">
+    <footer className="bg-gray-950 border-t border-white/5 px-4 py-16">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🍽️</span>
-              <span className="text-white font-bold text-xl">foody</span>
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 rounded-xl gradient-brand flex items-center justify-center">
+                <span className="text-white font-black text-sm">K</span>
+              </div>
+              <span className="text-white font-black text-xl">Kokomi</span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Deine smarte Küchen-App für einen besseren Haushalt.
+            <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+              Die smarte Küchen-App die dir hilft Lebensmittel zu retten,
+              besser zu kochen und deinen Alltag zu vereinfachen.
             </p>
+            <a href="mailto:support@kokomi.app"
+              className="inline-flex items-center gap-2 mt-4 text-gray-500 hover:text-gray-300 text-sm transition-colors">
+              ✉️ support@kokomi.app
+            </a>
           </div>
 
-          {/* Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm">App</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Preise</a></li>
-              <li><a href="#download" className="hover:text-white transition-colors">Download</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+            <p className="text-white font-semibold text-sm mb-4">App</p>
+            <ul className="space-y-2.5">
+              {navLinks.map(l => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-gray-500 hover:text-gray-300 text-sm transition-colors">{l.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm">Rechtliches</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
-              <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
-              <li><a href="/agb" className="hover:text-white transition-colors">AGB</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm">Kontakt</h4>
-            <ul className="space-y-2 text-sm text-gray-500">
-              <li><a href="mailto:hello@foody-app.de" className="hover:text-white transition-colors">hello@foody-app.de</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">TikTok</a></li>
+            <p className="text-white font-semibold text-sm mb-4">Rechtliches</p>
+            <ul className="space-y-2.5">
+              {legalLinks.map(l => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-gray-500 hover:text-gray-300 text-sm transition-colors">{l.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} Foody. Alle Rechte vorbehalten.
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-gray-600 text-xs">
+            © {new Date().getFullYear()} Kokomi App · Made with ❤️ in Deutschland
           </p>
-          <p className="text-gray-600 text-sm">
-            Made with ❤️ in Deutschland
-          </p>
+          <div className="flex items-center gap-4">
+            <span className="text-gray-700 text-xs">🇩🇪 Server in der EU</span>
+            <span className="text-gray-700 text-xs">🔒 DSGVO-konform</span>
+            <span className="text-gray-700 text-xs">♻️ Food Rescue</span>
+          </div>
         </div>
       </div>
     </footer>
   )
 }
-
