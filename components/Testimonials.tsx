@@ -1,8 +1,8 @@
 'use client'
 
 const testimonials = [
-  { name: 'Sarah M.', role: 'Mutter von 2 Kindern', avatar: '👩', text: 'Seit ich Kokomi nutze werfen wir kaum noch Lebensmittel weg. Die KI schlägt immer was Leckeres mit dem vor was noch da ist. Absolute Empfehlung!', stars: 5 },
-  { name: 'Tom K.', role: 'Student, WG mit 3 Personen', avatar: '👨', text: 'Unsere WG teilt jetzt alles über Kokomi. Einkaufslisten in Echtzeit, geteilter Vorrat – nie wieder doppelt kaufen oder streiten wer was einkauft.', stars: 5 },
+  { name: 'Sarah M.', role: 'Mutter von 2 Kindern', avatar: '👩', text: 'Seit ich Kokomu nutze werfen wir kaum noch Lebensmittel weg. Die KI schlägt immer was Leckeres mit dem vor was noch da ist. Absolute Empfehlung!', stars: 5 },
+  { name: 'Tom K.', role: 'Student, WG mit 3 Personen', avatar: '👨', text: 'Unsere WG teilt jetzt alles über Kokomu. Einkaufslisten in Echtzeit, geteilter Vorrat – nie wieder doppelt kaufen oder streiten wer was einkauft.', stars: 5 },
   { name: 'Lisa B.', role: 'Berufstätige, viel unterwegs', avatar: '👩‍💼', text: 'Der Wochenplaner spart mir jeden Sonntag 30 Minuten Planung. Und die KI-Rezepte sind wirklich gut – kein 08/15 sondern wirklich kreativ.', stars: 5 },
   { name: 'Michael R.', role: 'Koch & Foodie', avatar: '👨‍🍳', text: 'Als jemand der viel kocht ist der Community-Feed Gold wert. Ich teile meine Rezepte und entdecke täglich neue Ideen von anderen.', stars: 5 },
   { name: 'Jana W.', role: 'Nachhaltigkeitsfan', avatar: '🌱', text: 'Endlich eine App die mir wirklich hilft Lebensmittelverschwendung zu reduzieren. Die Ablaufwarnungen und Resteverwertungs-Rezepte sind perfekt.', stars: 5 },

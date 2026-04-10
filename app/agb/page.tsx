@@ -2,8 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Nutzungsbedingungen – Kokomi',
-  description: 'Allgemeine Geschäftsbedingungen der Kokomi App.',
+  title: 'Nutzungsbedingungen – Kokomu',
+  description: 'Allgemeine Geschäftsbedingungen der Kokomu App.',
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -23,15 +23,15 @@ export default function AGB() {
           ← Zurück zur Startseite
         </Link>
         <h1 className="text-4xl font-black text-white mb-2">Nutzungsbedingungen</h1>
-        <p className="text-gray-500 text-sm mb-10">Stand: April 2026 · Kokomi App</p>
+        <p className="text-gray-500 text-sm mb-10">Stand: April 2026 · Kokomu App</p>
 
         <div className="space-y-2 text-sm">
           <Section title="1. Geltungsbereich">
-            <p>Diese Nutzungsbedingungen gelten für die Nutzung der mobilen App <strong className="text-white">Kokomi</strong>, betrieben von Christian Remmele (nachfolgend &bdquo;Anbieter&ldquo;). Mit der Nutzung stimmst du diesen Bedingungen zu.</p>
+            <p>Diese Nutzungsbedingungen gelten für die Nutzung der mobilen App <strong className="text-white">Kokomu</strong>, betrieben von Christian Remmele (nachfolgend &bdquo;Anbieter&ldquo;). Mit der Nutzung stimmst du diesen Bedingungen zu.</p>
           </Section>
 
           <Section title="2. Leistungsbeschreibung">
-            <p>Kokomi ist eine Smart-Kitchen-App mit folgenden Funktionen:</p>
+            <p>Kokomu ist eine Smart-Kitchen-App mit folgenden Funktionen:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Vorratsverwaltung und Lebensmittelscanner</li>
               <li>KI-gestützte Rezeptgenerierung</li>
@@ -52,7 +52,7 @@ export default function AGB() {
             </ul>
           </Section>
 
-          <Section title="4. Kokomi Pro – Abonnement">
+          <Section title="4. Kokomu Pro – Abonnement">
             <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 mb-3">
               <p><strong className="text-white">Monatlich:</strong> 2,99 € / Monat</p>
               <p><strong className="text-white">Jährlich:</strong> 19,99 € / Jahr (44% Ersparnis)</p>
@@ -104,7 +104,7 @@ export default function AGB() {
           </Section>
 
           <Section title="10. Kontakt">
-            <p>Bei Fragen: <a href="mailto:support@kokomi.app" className="text-blue-400 hover:underline">support@kokomi.app</a></p>
+            <p>Bei Fragen: <a href="mailto:support@Kokomu.app" className="text-blue-400 hover:underline">support@Kokomu.app</a></p>
           </Section>
         </div>
       </div>

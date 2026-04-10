@@ -31,7 +31,7 @@ export default function Navbar() {
           <div className="w-8 h-8 rounded-xl gradient-brand flex items-center justify-center shadow-md">
             <span className="text-white font-black text-sm">K</span>
           </div>
-          <span className="text-gray-800 font-black text-xl tracking-tight">Kokomi</span>
+          <span className="text-gray-800 font-black text-xl tracking-tight">Kokomu</span>
         </a>
 
         {/* Desktop Nav */}

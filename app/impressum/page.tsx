@@ -2,8 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Impressum – Kokomi',
-  description: 'Impressum der Kokomi App gemäß § 5 TMG.',
+  title: 'Impressum – Kokomu',
+  description: 'Impressum der Kokomu App gemäß § 5 TMG.',
 }
 
 export default function Impressum() {
@@ -20,7 +20,7 @@ export default function Impressum() {
           <section>
             <h2 className="text-white font-bold text-xl mb-3">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-400">
-              <strong className="text-white">Kokomi App</strong><br />
+              <strong className="text-white">Kokomu App</strong><br />
               Christian Remmele<br />
               Eichenmühleweg 23<br />
               88048 Friedrichshafen<br />
@@ -31,7 +31,7 @@ export default function Impressum() {
           <section>
             <h2 className="text-white font-bold text-xl mb-3">Kontakt</h2>
             <p className="text-gray-400">
-              E-Mail: <a href="mailto:support@kokomi.app" className="text-blue-400 hover:underline">support@kokomi.app</a>
+              E-Mail: <a href="mailto:support@Kokomu.app" className="text-blue-400 hover:underline">support@Kokomu.app</a>
             </p>
           </section>
 

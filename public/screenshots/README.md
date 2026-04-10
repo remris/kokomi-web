@@ -1,4 +1,4 @@
-# Screenshots für kokomi.app
+# Screenshots für Kokomu.app
 
 Lege deine App-Screenshots hier ab. Die Website liest sie automatisch aus diesem Ordner.
 
@@ -41,7 +41,7 @@ screen={<VorratScreen />}
 screen={
   <img
     src="/screenshots/02-vorrat.png"
-    alt="Kokomi Vorrat"
+    alt="Kokomu Vorrat"
     className="w-full h-full object-cover object-top"
   />
 }

@@ -5,19 +5,19 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
 	{
-		q: 'Ist Kokomi wirklich kostenlos?',
-		a: 'Ja! Der Free-Plan ist dauerhaft kostenlos und enthält alle Kernfunktionen: Vorrat, Scanner, Einkaufslisten, KI-Rezepte (5/Woche) und den Community-Feed. Kokomi Pro gibt es für 2,99 €/Monat mit unlimitierten KI-Rezepten und weiteren Premium-Features.',
+		q: 'Ist Kokomu wirklich kostenlos?',
+		a: 'Ja! Der Free-Plan ist dauerhaft kostenlos und enthält alle Kernfunktionen: Vorrat, Scanner, Einkaufslisten, KI-Rezepte (5/Woche) und den Community-Feed. Kokomu Pro gibt es für 2,99 €/Monat mit unlimitierten KI-Rezepten und weiteren Premium-Features.',
 	},
 	{
 		q: 'Welche KI steckt hinter den Rezepten?',
-		a: 'Kokomi nutzt modernste Large Language Models (GPT-4 / Groq) um kontextbezogene Rezepte zu generieren. Die KI kennt deinen aktuellen Vorrat, deine Allergene und Präferenzen und erstellt darauf basierend wirklich passende Vorschläge.',
+		a: 'Kokomu nutzt modernste Large Language Models (GPT-4 / Groq) um kontextbezogene Rezepte zu generieren. Die KI kennt deinen aktuellen Vorrat, deine Allergene und Präferenzen und erstellt darauf basierend wirklich passende Vorschläge.',
 	},
 	{
 		q: 'Wie sicher sind meine Daten?',
 		a: 'Alle Daten werden DSGVO-konform auf EU-Servern (Supabase, Frankfurt) gespeichert. Wir geben deine Daten nicht an Dritte weiter und du kannst dein Konto und alle Daten jederzeit löschen.',
 	},
 	{
-		q: 'Kann ich Kokomi mit meiner Familie oder WG nutzen?',
+		q: 'Kann ich Kokomu mit meiner Familie oder WG nutzen?',
 		a: 'Ja! Erstelle einen gemeinsamen Haushalt und lade Mitglieder per Einladungscode ein. Vorrat und Einkaufslisten werden in Echtzeit geteilt. Im Free-Plan bis 2 Personen, mit Pro bis zu 6 Personen.',
 	},
 	{
@@ -25,11 +25,11 @@ const faqs = [
 		a: 'Das Scannen an sich funktioniert offline. Für die Produktdaten-Abfrage bei OpenFoodFacts ist kurz eine Internetverbindung nötig. Vorrat und Einkaufslisten werden lokal gecacht und synchronisieren sobald du wieder online bist.',
 	},
 	{
-		q: 'Auf welchen Geräten läuft Kokomi?',
-		a: 'Aktuell ist Kokomi für Android verfügbar (Google Play Store). Die iOS-Version (App Store) folgt in Kürze. Eine Web-Version ist in Planung.',
+		q: 'Auf welchen Geräten läuft Kokomu?',
+		a: 'Aktuell ist Kokomu für Android verfügbar (Google Play Store). Die iOS-Version (App Store) folgt in Kürze. Eine Web-Version ist in Planung.',
 	},
 	{
-		q: 'Wie kann ich Kokomi Pro kündigen?',
+		q: 'Wie kann ich Kokomu Pro kündigen?',
 		a: 'Ganz einfach: In den Google Play Store Einstellungen unter „Abonnements" jederzeit kündbar. Das Pro-Abo läuft dann bis zum Ende des bezahlten Zeitraums weiter — kein Geld geht verloren.',
 	},
 	{
@@ -86,10 +86,10 @@ export default function FAQ() {
 				<p className="text-center text-gray-400 text-sm mt-8">
 					Weitere Fragen?{' '}
 					<a
-						href="mailto:support@kokomi.app"
+						href="mailto:support@Kokomu.app"
 						className="text-[#3D6B8F] hover:underline"
 					>
-						support@kokomi.app
+						support@Kokomu.app
 					</a>
 				</p>
 			</div>

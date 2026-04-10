@@ -142,7 +142,7 @@ const screens = [
   },
   {
     title: 'Community & Social Feed',
-    description: 'Teile deine Lieblingsrezepte und Wochenpläne. Entdecke was andere kochen, vernetze dich und hol dir Inspiration von der Kokomi-Community.',
+    description: 'Teile deine Lieblingsrezepte und Wochenpläne. Entdecke was andere kochen, vernetze dich und hol dir Inspiration von der Kokomu-Community.',
     screen: <FeedScreen />,
   },
 ]
@@ -154,7 +154,7 @@ export default function Screenshots() {
         <div className="text-center mb-20">
           <span className="text-[#56B4A0] text-sm font-semibold uppercase tracking-widest">App Screenshots</span>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mt-3 mb-4">
-            Sieh Kokomi in Aktion
+            Sieh Kokomu in Aktion
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
             Designed für maximale Übersichtlichkeit – intuitiv von Tag 1.

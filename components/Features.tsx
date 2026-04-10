@@ -23,7 +23,7 @@ export default function Features() {
             Alles was deine Küche braucht
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            Kokomi kombiniert KI-Technologie mit einfacher Bedienung – für jeden Haushalt.
+            Kokomu kombiniert KI-Technologie mit einfacher Bedienung – für jeden Haushalt.
           </p>
         </div>
 

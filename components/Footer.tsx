@@ -23,15 +23,15 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-xl gradient-brand flex items-center justify-center">
                 <span className="text-white font-black text-sm">K</span>
               </div>
-              <span className="text-gray-900 font-black text-xl">Kokomi</span>
+              <span className="text-gray-900 font-black text-xl">Kokomu</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
               Die smarte Küchen-App die dir hilft Lebensmittel zu retten,
               besser zu kochen und deinen Alltag zu vereinfachen.
             </p>
-            <a href="mailto:support@kokomi.app"
+            <a href="mailto:support@Kokomu.app"
               className="inline-flex items-center gap-2 mt-4 text-gray-400 hover:text-[#3D6B8F] text-sm transition-colors">
-              ✉ support@kokomi.app
+              ✉ support@Kokomu.app
             </a>
           </div>
 
@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-400 text-xs">
-            © {new Date().getFullYear()} Kokomi App · Made with ❤️ in Deutschland
+            © {new Date().getFullYear()} Kokomu App · Made with ❤️ in Deutschland
           </p>
           <div className="flex items-center gap-4">
             <span className="text-gray-300 text-xs">🇩🇪 Server in der EU</span>

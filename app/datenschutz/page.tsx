@@ -2,8 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Datenschutzerklärung – Kokomi',
-  description: 'Datenschutzerklärung der Kokomi App gemäß DSGVO.',
+  title: 'Datenschutzerklärung – Kokomu',
+  description: 'Datenschutzerklärung der Kokomu App gemäß DSGVO.',
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -23,14 +23,14 @@ export default function Datenschutz() {
           ← Zurück zur Startseite
         </Link>
         <h1 className="text-4xl font-black text-white mb-2">Datenschutzerklärung</h1>
-        <p className="text-gray-500 text-sm mb-10">Stand: April 2026 · Kokomi App</p>
+        <p className="text-gray-500 text-sm mb-10">Stand: April 2026 · Kokomu App</p>
 
         <div className="space-y-2 text-sm">
           <Section title="1. Verantwortlicher">
-            <p><strong className="text-white">Kokomi App</strong><br />
+            <p><strong className="text-white">Kokomu App</strong><br />
             Christian Remmele<br />
             Eichenmühleweg 23, 88048 Friedrichshafen<br />
-            E-Mail: <a href="mailto:support@kokomi.app" className="text-blue-400 hover:underline">support@kokomi.app</a></p>
+            E-Mail: <a href="mailto:support@Kokomu.app" className="text-blue-400 hover:underline">support@Kokomu.app</a></p>
           </Section>
 
           <Section title="2. Welche Daten wir erheben">
@@ -49,7 +49,7 @@ export default function Datenschutz() {
             <ul className="list-disc pl-5 space-y-1">
               <li>Bereitstellung aller App-Funktionen</li>
               <li>KI-basierte Rezeptgenerierung (nur deine Anfrage-Texte, keine Kontodaten an OpenAI)</li>
-              <li>Verarbeitung deines Abo-Status (Kokomi Pro via RevenueCat)</li>
+              <li>Verarbeitung deines Abo-Status (Kokomu Pro via RevenueCat)</li>
               <li>Anonyme Fehlerberichte zur App-Verbesserung (Sentry)</li>
             </ul>
           </Section>
@@ -85,7 +85,7 @@ export default function Datenschutz() {
               <li>Datenportabilität (Art. 20 DSGVO)</li>
               <li>Widerspruch (Art. 21 DSGVO)</li>
             </ul>
-            <p className="mt-2">Kontakt: <a href="mailto:support@kokomi.app" className="text-blue-400 hover:underline">support@kokomi.app</a></p>
+            <p className="mt-2">Kontakt: <a href="mailto:support@Kokomu.app" className="text-blue-400 hover:underline">support@Kokomu.app</a></p>
           </Section>
 
           <Section title="8. Kontodaten löschen">
