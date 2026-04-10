@@ -1,10 +1,10 @@
 'use client'
 
 const steps = [
-  { num: '01', emoji: '📱', title: 'App herunterladen', desc: 'Kostenlos im Google Play Store. Konto in 30 Sekunden erstellt – E-Mail reicht.' },
-  { num: '02', emoji: '📷', title: 'Vorrat erfassen', desc: 'Barcode scannen, Kassenbon fotografieren oder manuell eingeben. Dein Vorrat ist sofort digital.' },
-  { num: '03', emoji: '✨', title: 'KI fragt deine Ideen', desc: 'Sag was du kochen magst oder lass die KI entscheiden. Rezepte aus deinen vorhandenen Zutaten – in Sekunden.' },
-  { num: '04', emoji: '🛒', title: 'Einkauf & Haushalt', desc: 'Fehlende Zutaten landen direkt auf der Einkaufsliste. Haushaltsmitglieder sehen alles in Echtzeit.' },
+  { num: '01', emoji: '📱', title: 'App herunterladen', desc: 'Kostenlos im Google Play Store. Konto in 30 Sekunden erstellt – Name, E-Mail, Passwort und du bist dabei.' },
+  { num: '02', emoji: '📷', title: 'Vorrat erfassen', desc: 'Barcode scannen, Kassenbon fotografieren oder manuell eingeben. Dein Vorrat ist sofort digital, mit MHD und Mengen.' },
+  { num: '03', emoji: '✨', title: 'KI kocht für dich', desc: 'Sag was du kochen magst oder lass die KI entscheiden. 5 Rezepte aus deinen Vorräten – in Sekunden. Airfryer, OnePot, Vegan & mehr.' },
+  { num: '04', emoji: '🏠', title: 'Haushalt & Community', desc: 'Haushalt mit Familie teilen, Einkaufslisten gemeinsam abhaken, lokaler Community beitreten – Reste teilen, Nachbarn kennenlernen.' },
 ]
 
 export default function HowItWorks() {

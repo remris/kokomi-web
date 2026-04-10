@@ -6,19 +6,27 @@ import { ChevronDown } from 'lucide-react'
 const faqs = [
 	{
 		q: 'Ist Kokomu wirklich kostenlos?',
-		a: 'Ja! Der Free-Plan ist dauerhaft kostenlos und enthält alle Kernfunktionen: Vorrat, Scanner, Einkaufslisten, KI-Rezepte (5/Woche) und den Community-Feed. Kokomu Pro gibt es für 2,99 €/Monat mit unlimitierten KI-Rezepten und weiteren Premium-Features.',
+		a: 'Ja! Der Free-Plan ist dauerhaft kostenlos und enthält alle Kernfunktionen: Vorrat, Scanner, Einkaufslisten, KI-Rezepte (5/Woche) und den Community-Feed. Kokomu Pro gibt es für 2,99 €/Monat mit unlimitierten KI-Rezepten, Wochenplaner und weiteren Premium-Features.',
+	},
+	{
+		q: 'Was sind lokale Communities?',
+		a: 'Communities sind Nachbarschaftsgruppen nach PLZ-Bereich. Du kannst einer Community beitreten oder eine eigene gründen. Dort teilst du Lebensmittelreste, bietest Vorräte an, stellst Fragen ("Wer hat eine Tasse Zucker?") und chattest mit Menschen in deiner Umgebung. Communities brauchen einen Admin und eine Zustimmung zum Beitreten.',
+	},
+	{
+		q: 'Was kann ich im Social Feed posten?',
+		a: 'Du kannst Beiträge mit Text erstellen und deine eigenen Rezepte oder Wochenpläne verknüpfen. Andere User sehen dann direkt die verlinkte Rezeptkarte im Post, können kommentieren und liken. Ideal für Empfehlungen wie "Mein Lieblingsrezept für den Frühling" oder "Mein Wochenplan für gesundes Kochen".',
 	},
 	{
 		q: 'Welche KI steckt hinter den Rezepten?',
-		a: 'Kokomu nutzt modernste Large Language Models (GPT-4 / Groq) um kontextbezogene Rezepte zu generieren. Die KI kennt deinen aktuellen Vorrat, deine Allergene und Präferenzen und erstellt darauf basierend wirklich passende Vorschläge.',
+		a: 'Kokomu nutzt modernste Large Language Models (Groq / LLaMA) um kontextbezogene Rezepte zu generieren. Die KI kennt deinen aktuellen Vorrat, deine Allergene und Präferenzen und erstellt darauf basierend 5 passende Vorschläge gleichzeitig.',
 	},
 	{
 		q: 'Wie sicher sind meine Daten?',
-		a: 'Alle Daten werden DSGVO-konform auf EU-Servern (Supabase, Frankfurt) gespeichert. Wir geben deine Daten nicht an Dritte weiter und du kannst dein Konto und alle Daten jederzeit löschen.',
+		a: 'Alle Daten werden DSGVO-konform auf EU-Servern (Supabase, Frankfurt) gespeichert. Wir geben deine Daten nicht an Dritte weiter und du kannst dein Konto und alle Daten jederzeit löschen. Im Chat und in Posts gibt es einen Profanity-Filter.',
 	},
 	{
 		q: 'Kann ich Kokomu mit meiner Familie oder WG nutzen?',
-		a: 'Ja! Erstelle einen gemeinsamen Haushalt und lade Mitglieder per Einladungscode ein. Vorrat und Einkaufslisten werden in Echtzeit geteilt. Im Free-Plan bis 2 Personen, mit Pro bis zu 6 Personen.',
+		a: 'Ja! Erstelle einen gemeinsamen Haushalt und lade Mitglieder per Einladungscode ein. Vorrat und Einkaufslisten werden in Echtzeit geteilt – inklusive Haushaltschat für schnelle Absprachen. Im Free-Plan bis 2 Personen, mit Pro bis zu 6 Personen.',
 	},
 	{
 		q: 'Funktioniert der Barcode-Scanner offline?',

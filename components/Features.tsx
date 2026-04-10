@@ -1,15 +1,18 @@
 'use client'
 
 const features = [
-  { emoji: '✨', title: 'KI-Rezepte aus deinem Vorrat', desc: 'Sag der KI was du hast – sie generiert kreative, abwechslungsreiche Rezepte. Keine Ideen mehr was du kochen sollst.', color: 'from-violet-50 to-violet-100/50', border: 'border-violet-200', tag: 'Beliebt' },
-  { emoji: '📦', title: 'Vorrat immer im Blick', desc: 'Barcode scannen, MHD erfassen, Ablaufwarnungen erhalten. Dein digitaler Kühlschrank – nie wieder Lebensmittel wegwerfen.', color: 'from-blue-50 to-blue-100/50', border: 'border-blue-200' },
-  { emoji: '🛒', title: 'Smarte Einkaufslisten', desc: 'Erstelle Listen, teile sie mit dem Haushalt, hake gemeinsam ab. Kassenbon-Scanner übernimmt alles direkt in den Vorrat.', color: 'from-teal-50 to-teal-100/50', border: 'border-teal-200' },
-  { emoji: '🏠', title: 'Haushalt teilen', desc: 'Lade Mitbewohner oder Familie ein. Geteilter Vorrat, geteilte Listen, gemeinsamer Haushaltschat – alles in Echtzeit.', color: 'from-orange-50 to-orange-100/50', border: 'border-orange-200' },
-  { emoji: '🌱', title: 'Lebensmittel retten', desc: 'Ablaufwarnungen, Resteverwertungs-Rezepte und smarte Vorschläge helfen dir, weniger wegzuwerfen und nachhaltiger zu leben.', color: 'from-green-50 to-green-100/50', border: 'border-green-200', tag: 'Nachhaltigkeit' },
-  { emoji: '📅', title: 'Wochenplaner', desc: 'Plane 7 Tage im Voraus. Alle Zutaten direkt auf die Einkaufsliste. Mit der Community teilen oder privat behalten.', color: 'from-cyan-50 to-cyan-100/50', border: 'border-cyan-200' },
-  { emoji: '📷', title: 'Barcode & Kassenbon Scanner', desc: 'Produkte blitzschnell per Barcode erfassen. Kassenbon fotografieren – KI erkennt alle Produkte automatisch.', color: 'from-yellow-50 to-yellow-100/50', border: 'border-yellow-200' },
-  { emoji: '🌍', title: 'Community & Social Feed', desc: 'Entdecke Rezepte und Wochenpläne von anderen. Teile deine Lieblingsgerichte, kommentiere und vernetze dich.', color: 'from-pink-50 to-pink-100/50', border: 'border-pink-200' },
-  { emoji: '📊', title: 'Nährwerte & Kalorien', desc: 'Verfolge Kalorien, Protein, Kohlenhydrate und Fett. Erstelle dein Ernährungsprofil und behalte deine Ziele im Blick.', color: 'from-red-50 to-red-100/50', border: 'border-red-200' },
+  { emoji: '✨', title: 'KI-Rezepte aus deinem Vorrat', desc: 'Sag der KI was du hast – sie generiert 5 kreative Rezepte gleichzeitig. Airfryer, OnePot, MealPrep & mehr. Nie wieder "Was koche ich heute?"', color: 'from-violet-50 to-violet-100/50', border: 'border-violet-200', tag: 'Beliebt' },
+  { emoji: '📦', title: 'Vorrat immer im Blick', desc: 'Barcode scannen, MHD erfassen, Ablaufwarnungen erhalten. Geöffnete Artikel tracken, Mindestbestände setzen – dein digitaler Kühlschrank.', color: 'from-blue-50 to-blue-100/50', border: 'border-blue-200' },
+  { emoji: '🛒', title: 'Smarter Einkaufsmodus', desc: 'Einkaufslisten mit dem Haushalt teilen, per Kategorie sortieren, im Einkaufsmodus abhaken. Alles landet direkt im Vorrat – automatisch.', color: 'from-teal-50 to-teal-100/50', border: 'border-teal-200' },
+  { emoji: '🏠', title: 'Haushalt & Echtzeit-Chat', desc: 'Lade Familie oder Mitbewohner ein. Geteilter Vorrat, gemeinsame Listen, eingebauter Haushaltschat mit Schnellnachrichten – alles live synchron.', color: 'from-orange-50 to-orange-100/50', border: 'border-orange-200' },
+  { emoji: '🌱', title: 'Lebensmittel retten', desc: 'Ablaufwarnungen, smarte Resteverwertungs-Rezepte und Verbrauchs-Tracking. Weniger wegwerfen, nachhaltiger leben – die App zeigt dir wie.', color: 'from-green-50 to-green-100/50', border: 'border-green-200', tag: 'Nachhaltigkeit' },
+  { emoji: '📅', title: 'Wochenplaner', desc: 'Plane 7 Tage im Voraus. Alle Zutaten mit einem Klick auf die Einkaufsliste. Mit der Community teilen oder als private Vorlage speichern.', color: 'from-cyan-50 to-cyan-100/50', border: 'border-cyan-200' },
+  { emoji: '🤝', title: 'Lokale Communities', desc: 'Tritt Communities in deiner PLZ-Region bei oder gründe eine eigene. Teile Lebensmittelreste, biete Vorräte an und vernetze dich nachbarschaftlich.', color: 'from-rose-50 to-rose-100/50', border: 'border-rose-200', tag: 'Neu' },
+  { emoji: '💬', title: 'Social Feed & Posts', desc: 'Teile Rezepte und Wochenpläne als Post – mit Text, Bild und verknüpftem Gericht. Kommentiere, like und entdecke was andere kochen.', color: 'from-pink-50 to-pink-100/50', border: 'border-pink-200' },
+  { emoji: '📷', title: 'Barcode & Kassenbon Scanner', desc: 'Produkte blitzschnell per Barcode erfassen. Kassenbon fotografieren – KI erkennt alle Produkte automatisch und trägt sie in den Vorrat ein.', color: 'from-yellow-50 to-yellow-100/50', border: 'border-yellow-200' },
+  { emoji: '🌍', title: 'Community Rezepte & Pläne entdecken', desc: 'Durchstöbere tausende Rezepte und Wochenpläne. Nach Username suchen, Favoriten speichern, bewerten und eigene Kreationen veröffentlichen.', color: 'from-indigo-50 to-indigo-100/50', border: 'border-indigo-200' },
+  { emoji: '📊', title: 'Nährwerte & Kalorien', desc: 'Verfolge Kalorien, Protein, Kohlenhydrate und Fett. Erstelle dein Ernährungsprofil und behalte deine persönlichen Ziele im Blick.', color: 'from-red-50 to-red-100/50', border: 'border-red-200' },
+  { emoji: '🔒', title: 'Datenschutz & DSGVO', desc: 'Alle Daten auf EU-Servern (Frankfurt). DSGVO-konform, kein Tracking an Dritte. Profanity-Filter im Chat. Deine Daten gehören dir.', color: 'from-gray-50 to-gray-100/50', border: 'border-gray-200' },
 ]
 
 export default function Features() {

@@ -67,8 +67,9 @@ function HeroAppScreen() {
 }
 
 const featurePills = [
-  '✨ KI-Rezepte', '📦 Vorrat tracken', '🛒 Einkaufslisten',
-  '🏠 Haushalt teilen', '📊 Nährwerte', '🌱 Lebensmittel retten',
+  '✨ KI-Rezepte', '📦 Vorrat tracken', '🛒 Einkaufsmodus',
+  '🏠 Haushalt teilen', '🤝 Communities', '💬 Social Feed',
+  '🌱 Lebensmittel retten', '📊 Nährwerte',
 ]
 
 export default function Hero() {
