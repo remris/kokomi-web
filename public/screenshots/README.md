@@ -1,49 +1,48 @@
-# Screenshots für Kokomu.app
+# 📸 Kokomu – Screenshot Platzhalter
 
-Lege deine App-Screenshots hier ab. Die Website liest sie automatisch aus diesem Ordner.
+Lege deine echten App-Screenshots als **PNG** in diesen Ordner.  
+Dateiname exakt wie unten angegeben (Groß-/Kleinschreibung beachten).
 
-## Dateinamen & Reihenfolge
+## So aktivierst du echte Screenshots in der Website
 
-| Dateiname | Beschreibung | Sektion |
-|-----------|-------------|---------|
-| `01-home.png` | Home-Screen (Dashboard) | Hero-Mockup |
-| `02-vorrat.png` | Vorrat / Kühlschrank-Übersicht | Screenshots-Sektion 1 |
-| `03-rezepte.png` | KI-Rezepte Screen | Screenshots-Sektion 2 |
-| `04-feed.png` | Community Feed | Screenshots-Sektion 3 |
-| `05-wochenplan.png` | Wochenplaner | Optional |
-| `06-einkauf.png` | Einkaufsliste | Optional |
-
-## Technische Anforderungen
-
-- **Format:** PNG oder WEBP (PNG bevorzugt)
-- **Auflösung:** mind. **1080 × 2340 px** (Full-HD Android, 9:19.5)
-- **Seitenverhältnis:** 9:19.5 (standard Android-Screenshot)
-- **Hintergrund:** echter Geräte-Screenshot ohne Gerätrahmen — der Rahmen wird von der Website drumgelegt
-- **Größe:** max. 500 KB pro Bild (mit TinyPNG.com komprimieren)
-
-## Wie du Screenshots machst
-
-1. App auf Android starten
-2. Zum gewünschten Screen navigieren
-3. Seitentaste + Lautstärke runter gleichzeitig
-4. Screenshot aus der Galerie hier speichern
-
-## Website einbinden
-
-Sobald du eine Datei hier ablegst, musst du in `components/Screenshots.tsx`
-den `src`-Pfad im jeweiligen `PhoneScreen`-Placeholder durch ein `<Image>` ersetzen:
-
-```tsx
-// Vorher (Placeholder):
-screen={<VorratScreen />}
-
-// Nachher (echter Screenshot):
-screen={
-  <img
-    src="/screenshots/02-vorrat.png"
-    alt="Kokomu Vorrat"
-    className="w-full h-full object-cover object-top"
-  />
-}
+In `components/Screenshots.tsx` findest du pro Phone-Eintrag:
+```ts
+src={undefined /* src={p.src} einkommentieren sobald echte PNGs da sind */}
 ```
+Ersetze `src={undefined}` durch `src={p.src}` – fertig.
 
+---
+
+## Dateiliste (13 Screenshots, alle 1080×1920 px empfohlen)
+
+| Datei | Tab | Beschreibung |
+|-------|-----|--------------|
+| `home_screen.png` | 🏠 Home | Übersicht, Ablaufwarnungen, Schnellzugriff |
+| `vorrat_liste.png` | 📦 Vorrat | Vorrat-Liste mit MHD-Farbkodierung |
+| `vorrat_kategorien.png` | 📦 Vorrat | Kategorien-Ansicht (Kühlschrank, Tiefkühl…) |
+| `einkauf_liste.png` | 🛒 Einkauf | Einkaufsliste mit Checkboxen und Mengen |
+| `einkauf_modus.png` | 🛒 Einkauf | Einkaufsmodus mit Fortschrittsbalken |
+| `ki_rezepte.png` | 🍳 Küche & KI | 5 KI-generierte Rezepte aus Vorrat |
+| `rezept_detail.png` | 🍳 Küche & KI | Rezept-Detailansicht mit Zutaten & Zubereitung |
+| `wochenplan.png` | 🍳 Küche & KI | 7-Tage-Wochenplan |
+| `haushalt_chat.png` | 👨‍👩‍👧 Haushalt | Haushaltsmitglieder & Chat |
+| `haushalt_einladen.png` | 👨‍👩‍👧 Haushalt | Einladungscode teilen |
+| `community_feed.png` | 🤝 Community | Social Feed mit verknüpften Rezepten |
+| `community_lokal.png` | 🤝 Community | Lokale Community mit Teilen-Angeboten |
+| `community_teilen.png` | 🤝 Community | Lebensmittel anbieten & Reste teilen |
+
+---
+
+## Tipps für gute Screenshots
+
+- **Gerät:** Pixel 7 / Samsung S23 – sauberes Android ohne Hersteller-UI
+- **Auflösung:** 1080 × 1920 px (9:19.5 Seitenverhältnis)
+- **Format:** PNG (kein JPEG – zu viel Kompressionsartefakte)
+- **Statusbar:** Zeige 9:41 Uhr, vollen Akku, kein Netz-Carrier-Name
+- **Testdaten:** Schöne Beispieldaten verwenden (keine leeren Listen!)
+- **Werkzeug:** Android Studio Emulator → Screenshot-Button, oder direkt am Gerät
+
+## SVG-Platzhalter
+
+Die `.svg`-Dateien in diesem Ordner sind nur visuelle Platzhalter.  
+Sie werden **nicht** in der Website angezeigt – nur die `.png`-Dateien zählen.
