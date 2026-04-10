@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const links = [
   { href: '#features', label: 'Features' },
@@ -28,8 +29,8 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-xl gradient-brand flex items-center justify-center shadow-md">
-            <span className="text-white font-black text-sm">K</span>
+          <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center shadow-md">
+            <Image src="/foody_icon2.png" alt="Kokomu Logo" width={36} height={36} />
           </div>
           <span className="text-gray-800 font-black text-xl tracking-tight">Kokomu</span>
         </a>

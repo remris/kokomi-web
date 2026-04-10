@@ -20,16 +20,16 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: 'https://Kokomu.app',
     siteName: 'Kokomu',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kokomu App Preview' }],
+    images: [{ url: '/foody_icon2.png', width: 800, height: 800, alt: 'Kokomu Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kokomu – Deine smarte Küchen-App',
     description: 'KI-Rezepte, Vorrat tracken, Lebensmittel retten.',
-    images: ['/og-image.png'],
+    images: ['/foody_icon2.png'],
   },
   robots: { index: true, follow: true },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
+  icons: { icon: '/foody_icon2.png', apple: '/foody_icon2.png' },
 }
 
 export default function RootLayout({
