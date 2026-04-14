@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { ArrowDown, Sparkles, Star } from 'lucide-react'
+import { ArrowDown, Sparkles } from 'lucide-react'
 
 function PhoneMockup({ label, screen }: { label: string; screen: React.ReactNode }) {
   return (
@@ -15,6 +15,38 @@ function PhoneMockup({ label, screen }: { label: string; screen: React.ReactNode
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
+const heroFloatCardBase =
+  'absolute z-20 max-w-[148px] glass-brand rounded-2xl p-3 border border-blue-200/50 shadow-sm hidden lg:block'
+
+function HeroFloatCard({
+  title,
+  subtitle,
+  highlight,
+  className,
+  animation = 'float',
+  delaySec = 0,
+}: {
+  title: string
+  subtitle: string
+  highlight?: string
+  className: string
+  animation?: 'float' | 'float-slow'
+  delaySec?: number
+}) {
+  return (
+    <div
+      className={`${heroFloatCardBase} ${animation === 'float-slow' ? 'animate-float-slow' : 'animate-float'} ${className}`}
+      style={{ animationDelay: `${delaySec}s` }}
+    >
+      <p className="text-[11px] font-bold text-gray-800 mb-0.5 leading-tight">{title}</p>
+      <p className="text-[10px] text-gray-500 leading-snug">{subtitle}</p>
+      {highlight ? (
+        <p className="text-[10px] text-[#3D6B8F] font-medium mt-1 leading-snug">{highlight}</p>
+      ) : null}
     </div>
   )
 }
@@ -66,12 +98,6 @@ function HeroAppScreen() {
   )
 }
 
-const featurePills = [
-  '✨ KI-Rezepte', '📦 Vorrat tracken', '🛒 Einkaufsmodus',
-  '🏠 Haushalt teilen', '🤝 Communities', '💬 Social Feed',
-  '🌱 Lebensmittel retten', '📊 Nährwerte',
-]
-
 export default function Hero() {
   const headRef = useRef<HTMLDivElement>(null)
 
@@ -118,24 +144,6 @@ export default function Hero() {
               Einkaufslisten mit dem Haushalt teilen – und nie wieder Lebensmittel verschwenden.
             </p>
 
-            <div className="flex items-center gap-3 justify-center lg:justify-start mb-8">
-              <div className="flex -space-x-2">
-                {['👨‍🍳', '👩‍🍳', '🧑‍🍳', '👨‍🍳', '👩'].map((e, i) => (
-                  <div key={i} className="w-8 h-8 rounded-full glass-brand border border-blue-200 flex items-center justify-center text-sm bg-white shadow-sm">
-                    {e}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-xs text-gray-400">Beliebt bei Haushalten in DE</p>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <a href="#download"
                 className="flex items-center justify-center gap-3 gradient-brand text-white font-bold px-8 py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all">
@@ -147,30 +155,64 @@ export default function Hero() {
                 Features entdecken <ArrowDown size={16} />
               </a>
             </div>
-
-            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-              {featurePills.map(item => (
-                <span key={item} className="bg-white border border-gray-200 text-gray-600 text-xs px-3 py-1.5 rounded-full shadow-sm">{item}</span>
-              ))}
-            </div>
           </div>
 
-          {/* Right – Phone mockup */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+          {/* Right – Phone mockup (nach links gerückt, Karten folgen im gleichen Wrapper) */}
+          <div className="flex w-full min-w-0 justify-center">
+            <div className="relative lg:-translate-x-[0.21rem] xl:-translate-x-[0.43rem] 2xl:-translate-x-[0.64rem]">
               <div className="absolute inset-0 scale-75 bg-blue-300/20 rounded-full blur-3xl" />
               <div className="relative animate-float">
                 <PhoneMockup label="📸 Screenshot hier einfügen" screen={<HeroAppScreen />} />
               </div>
-              <div className="absolute -left-12 top-1/4 glass-brand rounded-2xl p-3 animate-float-slow hidden lg:block border border-blue-200/50">
-                <p className="text-[11px] font-bold text-gray-800 mb-0.5">✨ KI-Rezept</p>
-                <p className="text-[10px] text-gray-500">Aus deinen Vorräten</p>
-                <p className="text-[10px] text-[#3D6B8F] font-medium mt-1">Pasta Carbonara 🍝</p>
-              </div>
-              <div className="absolute -right-10 bottom-1/3 glass rounded-2xl p-3 animate-float hidden lg:block border border-gray-200/80" style={{ animationDelay: '2s' }}>
-                <p className="text-[11px] font-bold text-gray-800 mb-0.5">✅ Gerettet!</p>
-                <p className="text-[10px] text-[#56B4A0]">3 Artikel vor Ablauf</p>
-              </div>
+              {/* Funktions-Hinweise um das Phone – gleicher glass-brand-Stil, an den Rändern verteilt */}
+              <HeroFloatCard
+                className="-left-[7.25rem] top-[4%] sm:-left-[7.5rem]"
+                animation="float-slow"
+                delaySec={0}
+                title="📅 Wochenplan"
+                subtitle="Mahlzeiten für die Woche planen – aus Vorrat & Ernährung"
+                highlight="7 Tage im Überblick · flexibel anpassen"
+              />
+              <HeroFloatCard
+                className="-left-[7rem] top-[calc(30%_+_50px)]"
+                animation="float-slow"
+                delaySec={0.35}
+                title="✨ KI-Rezepte"
+                subtitle="Keine Idee? Oder kochen mit dem, was du zuhause hast"
+                highlight="Inspiration & Vorrat kombiniert · schnell 🍝"
+              />
+              <HeroFloatCard
+                className="-right-[7.25rem] top-[8%] sm:-right-[7.5rem]"
+                animation="float"
+                delaySec={0.5}
+                title="🏠 Haushalt"
+                subtitle="Eine gemeinsame App – Listen & Einkauf für alle sichtbar"
+                highlight="Änderungen sofort für alle · nichts doppelt"
+              />
+              <HeroFloatCard
+                className="-right-[6.75rem] top-[44%]"
+                animation="float"
+                delaySec={0.85}
+                title="✅ Gerettet!"
+                subtitle="Noch nutzbar – bevor MHD abläuft"
+                highlight="3 Artikel gesichert"
+              />
+              <HeroFloatCard
+                className="-left-[6.5rem] bottom-[14%]"
+                animation="float-slow"
+                delaySec={1.1}
+                title="🛒 Einkaufsliste"
+                subtitle="Abhaken im Laden · Haushalt sieht mit"
+                highlight="Milch · Eier · Kräuter"
+              />
+              <HeroFloatCard
+                className="-right-[7rem] bottom-[6%]"
+                animation="float"
+                delaySec={1.45}
+                title="📍 Lokal"
+                subtitle="Reste teilen, tauschen & Nachbarn entdecken – bei dir in der Nähe"
+                highlight="Kurze Wege · weniger wegwerfen · vernetzt"
+              />
             </div>
           </div>
         </div>

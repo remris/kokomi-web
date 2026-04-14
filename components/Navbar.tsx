@@ -7,9 +7,10 @@ import Image from 'next/image'
 const links = [
   { href: '#features', label: 'Features' },
   { href: '#community', label: 'Community' },
-  { href: '#screenshots', label: 'Screenshots' },
+  { href: '#ernaehrung', label: 'Ernährung' },
+  // { href: '#screenshots', label: 'Screenshots' },
   { href: '#how-it-works', label: 'So funktioniert\'s' },
-  { href: '#pricing', label: 'Preise' },
+  { href: '#preise', label: 'Preise' },
   { href: '#faq', label: 'FAQ' },
 ]
 

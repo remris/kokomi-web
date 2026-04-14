@@ -3,8 +3,8 @@
 export default function Footer() {
   const navLinks = [
     { href: '#features', label: 'Features' },
-    { href: '#screenshots', label: 'Screenshots' },
-    { href: '#pricing', label: 'Preise' },
+    // { href: '#screenshots', label: 'Screenshots' },
+    { href: '#preise', label: 'Preise' },
     { href: '#download', label: 'Download' },
     { href: '#faq', label: 'FAQ' },
   ]

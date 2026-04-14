@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:fresh": "rimraf .next && next dev",
+    "dev:fresh": "node scripts/clean-next.mjs && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rimraf .next"
+    "clean": "node scripts/clean-next.mjs"
   },
   "dependencies": {
     "next": "15.5.14",

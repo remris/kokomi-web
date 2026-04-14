@@ -1,8 +1,10 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
-import Screenshots from '@/components/Screenshots'
+// import Screenshots from '@/components/Screenshots'
 import Community from '@/components/Community'
+import NutritionSection from '@/components/NutritionSection'
+import SustainabilityHighlightSection from '@/components/SustainabilityHighlightSection'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import Testimonials from '@/components/Testimonials'
@@ -12,16 +14,18 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main id="main-content" className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <Features />
-      <Screenshots />
+      {/* <Screenshots /> */}
       <Community />
+      <NutritionSection />
+      <SustainabilityHighlightSection />
       <HowItWorks />
-      <Pricing />
       <Testimonials />
       <FAQ />
+      <Pricing />
       <Download />
       <Footer />
     </main>
