@@ -12,10 +12,10 @@ export const featureBlocks = [
       "Mindestbestand-Warnungen",
     ],
     slides: [
-      { icon: "📦", label: "Vorrats-Ansicht" },
-      { icon: "📷", label: "Barcode-Scanner" },
-      { icon: "🛒", label: "Einkaufsliste" },
-      { icon: "✅", label: "Einkaufsmodus" },
+      { icon: "📦", label: "Vorrats-Ansicht", image: "/screenshots/vorrat_liste.jpg" },
+      { icon: "🗂️", label: "Kategorien", image: "/screenshots/vorrat_kategorien.svg" },
+      { icon: "🛒", label: "Einkaufsliste", image: "/screenshots/einkaufsliste.jpg" },
+      { icon: "✅", label: "Einkaufsmodus", image: "/screenshots/einkaufsmodus.jpg" },
     ],
   },
   {
@@ -30,9 +30,8 @@ export const featureBlocks = [
       "Koch-Modus mit Timer & Schritt-für-Schritt-Anleitung",
     ],
     slides: [
-      { icon: "🤖", label: "Rezept-Generator" },
-      { icon: "📖", label: "Rezept-Detail" },
-      { icon: "⏱️", label: "Koch-Modus" },
+      { icon: "🤖", label: "Rezept-Generator", image: "/screenshots/ki_rezepte.svg" },
+      { icon: "📖", label: "Rezept-Detail", image: "/screenshots/rezept_detail.svg" },
     ],
   },
   {
@@ -47,8 +46,7 @@ export const featureBlocks = [
       "Pläne in der Community teilen",
     ],
     slides: [
-      { icon: "📅", label: "Wochenplan" },
-      { icon: "✨", label: "KI-Plan erstellen" },
+      { icon: "📅", label: "Wochenplan", image: "/screenshots/wochenplan.svg" },
     ],
   },
 ] as const;

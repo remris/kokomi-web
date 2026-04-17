@@ -2,17 +2,24 @@
 
 import { useEffect, useRef } from 'react'
 import { ArrowDown, Sparkles } from 'lucide-react'
+import Image from 'next/image'
 
-function PhoneMockup({ label, screen }: { label: string; screen: React.ReactNode }) {
+function PhoneMockup({ label, screen, src }: { label: string; screen?: React.ReactNode; src?: string }) {
   return (
     <div className="relative mx-auto w-56 md:w-64">
       <div className="bg-gray-800 rounded-[2.8rem] p-2.5 phone-shadow">
         <div className="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-gray-900 rounded-full z-10" />
         <div className="bg-gray-900 rounded-[2.3rem] overflow-hidden aspect-[9/19.5] relative">
-          {screen}
-          <div className="absolute bottom-3 left-0 right-0 flex justify-center">
-            <span className="text-[9px] text-white/30 bg-black/40 px-2 py-0.5 rounded-full">{label}</span>
-          </div>
+          {src ? (
+            <Image src={src} alt={label} fill className="object-contain" quality={100} priority />
+          ) : (
+            screen
+          )}
+          {!src && (
+            <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+              <span className="text-[9px] text-white/30 bg-black/40 px-2 py-0.5 rounded-full">{label}</span>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -162,7 +169,7 @@ export default function Hero() {
             <div className="relative lg:-translate-x-[0.21rem] xl:-translate-x-[0.43rem] 2xl:-translate-x-[0.64rem]">
               <div className="absolute inset-0 scale-75 bg-blue-300/20 rounded-full blur-3xl" />
               <div className="relative animate-float">
-                <PhoneMockup label="📸 Screenshot hier einfügen" screen={<HeroAppScreen />} />
+                <PhoneMockup label="Home Screen" src="/screenshots/home_screen.jpg" screen={<HeroAppScreen />} />
               </div>
               {/* Funktions-Hinweise um das Phone – gleicher glass-brand-Stil, an den Rändern verteilt */}
               <HeroFloatCard

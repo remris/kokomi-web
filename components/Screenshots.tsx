@@ -427,7 +427,7 @@ const tabs: Tab[] = [
       'Push-Benachrichtigungen für ablaufende Artikel',
     ],
     phones: [
-      { label: 'home_screen', caption: 'Übersicht & Schnellzugriff', src: '/screenshots/home_screen.png', screen: <HomeScreen /> },
+      { label: 'home_screen', caption: 'Übersicht & Schnellzugriff', src: '/screenshots/home_screen.jpg', screen: <HomeScreen /> },
     ],
   },
   {
@@ -440,8 +440,8 @@ const tabs: Tab[] = [
       'Geteilter Vorrat mit allen Haushaltsmitgliedern in Echtzeit',
     ],
     phones: [
-      { label: 'vorrat_liste', caption: 'Liste mit MHD-Warnungen', src: '/screenshots/vorrat_liste.png', screen: <VorratListeScreen /> },
-      { label: 'vorrat_kategorien', caption: 'Nach Kategorie gruppiert', src: '/screenshots/vorrat_kategorien.png', screen: <VorratKatScreen /> },
+      { label: 'vorrat_liste', caption: 'Liste mit MHD-Warnungen', src: '/screenshots/vorrat_liste.jpg', screen: <VorratListeScreen /> },
+      { label: 'vorrat_kategorien', caption: 'Nach Kategorie gruppiert', src: '/screenshots/vorrat_kategorien.jpg', screen: <VorratKatScreen /> },
     ],
   },
   {
@@ -454,8 +454,8 @@ const tabs: Tab[] = [
       'Kassenbon fotografieren – KI erkennt alle Produkte',
     ],
     phones: [
-      { label: 'einkauf_liste', caption: 'Liste mit Mengenangaben', src: '/screenshots/einkauf_liste.png', screen: <EinkaufListeScreen /> },
-      { label: 'einkauf_modus', caption: 'Optimiert fürs Einkaufen', src: '/screenshots/einkauf_modus.png', screen: <EinkaufModusScreen /> },
+      { label: 'einkauf_liste', caption: 'Liste mit Mengenangaben', src: '/screenshots/einkauf_liste.jpg', screen: <EinkaufListeScreen /> },
+      { label: 'einkauf_modus', caption: 'Optimiert fürs Einkaufen', src: '/screenshots/einkauf_modus.jpg', screen: <EinkaufModusScreen /> },
     ],
   },
   {
@@ -468,9 +468,9 @@ const tabs: Tab[] = [
       'Wochenplaner: 7 Tage vorplanen, teilen oder als Vorlage speichern',
     ],
     phones: [
-      { label: 'ki_rezepte', caption: '5 Vorschläge aus Vorrat', src: '/screenshots/ki_rezepte.png', screen: <KiRezepteScreen /> },
-      { label: 'rezept_detail', caption: 'Zutaten & Zubereitung', src: '/screenshots/rezept_detail.png', screen: <RezeptDetailScreen /> },
-      { label: 'wochenplan', caption: '7-Tage-Planung', src: '/screenshots/wochenplan.png', screen: <WochenplanScreen /> },
+      { label: 'ki_rezepte', caption: '5 Vorschläge aus Vorrat', src: '/screenshots/ki_rezepte.jpg', screen: <KiRezepteScreen /> },
+      { label: 'rezept_detail', caption: 'Zutaten & Zubereitung', src: '/screenshots/rezept_detail.jpg', screen: <RezeptDetailScreen /> },
+      { label: 'wochenplan', caption: '7-Tage-Planung', src: '/screenshots/wochenplan.jpg', screen: <WochenplanScreen /> },
     ],
   },
   {
@@ -483,8 +483,8 @@ const tabs: Tab[] = [
       'Haushalts-Spitzname separat vom Community-Anzeigenamen',
     ],
     phones: [
-      { label: 'haushalt_chat', caption: 'Mitglieder & Chat', src: '/screenshots/haushalt_chat.png', screen: <HaushaltsScreen /> },
-      { label: 'haushalt_einladen', caption: 'Einladungscode teilen', src: '/screenshots/haushalt_einladen.png', screen: <HaushaltsInviteScreen /> },
+      { label: 'haushalt_chat', caption: 'Mitglieder & Chat', src: '/screenshots/haushalt_chat.jpg', screen: <HaushaltsScreen /> },
+      { label: 'haushalt_einladen', caption: 'Einladungscode teilen', src: '/screenshots/haushalt_einladen.jpg', screen: <HaushaltsInviteScreen /> },
     ],
   },
   {
@@ -497,9 +497,9 @@ const tabs: Tab[] = [
       'Folgen, liken, kommentieren und nach @Username suchen',
     ],
     phones: [
-      { label: 'community_feed', caption: 'Posts mit Rezept-Links', src: '/screenshots/community_feed.png', screen: <CommunityFeedScreen /> },
-      { label: 'community_lokal', caption: 'Nachbarschafts-Hub', src: '/screenshots/community_lokal.png', screen: <CommunityLokalScreen /> },
-      { label: 'community_teilen', caption: 'Reste & Angebote teilen', src: '/screenshots/community_teilen.png', screen: <CommunityTeilenScreen /> },
+      { label: 'community_feed', caption: 'Posts mit Rezept-Links', src: '/screenshots/community_feed.jpg', screen: <CommunityFeedScreen /> },
+      { label: 'community_lokal', caption: 'Nachbarschafts-Hub', src: '/screenshots/community_lokal.jpg', screen: <CommunityLokalScreen /> },
+      { label: 'community_teilen', caption: 'Reste & Angebote teilen', src: '/screenshots/community_teilen.jpg', screen: <CommunityTeilenScreen /> },
     ],
   },
 ]
@@ -570,7 +570,7 @@ export default function Screenshots() {
                     {tab.phones.map(p => (
                       <div key={p.label} className="flex items-center gap-2">
                         <span className="text-[10px] font-mono text-[#3D6B8F] bg-[#3D6B8F]/5 px-2 py-0.5 rounded">
-                          /public/screenshots/{p.label}.png
+                          /public/screenshots/{p.label}.jpg
                         </span>
                         <span className="text-[10px] text-gray-400">{p.caption}</span>
                       </div>
@@ -590,7 +590,7 @@ export default function Screenshots() {
                         label={p.label}
                         caption={p.caption}
                         screen={p.screen}
-                        src={undefined /* src={p.src} einkommentieren sobald echte PNGs da sind */}
+                        src={p.src}
                       />
                     </div>
                   )
